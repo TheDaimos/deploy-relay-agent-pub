@@ -126,11 +126,18 @@ Der öffentliche HACS-Weg ist für **DRA V1 FINAL** vorgesehen.
 
 Nach Freigabe:
 
-1. dieses Repository in HACS als benutzerdefiniertes Repository vom Typ **Integration** hinzufügen;
-2. **Deploy Relay Agent** installieren;
-3. Home Assistant vollständig neu starten;
-4. unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Deploy Relay Agent** suchen;
-5. DRA konfigurieren.
+**Repository für HACS — Copy & Paste:**
+
+```text
+https://github.com/TheDaimos/deploy-relay-agent-pub
+```
+
+1. in HACS unter **Benutzerdefinierte Repositories** die oben angegebene URL einfügen;
+2. als Typ **Integration** auswählen und das Repository hinzufügen;
+3. **Deploy Relay Agent** installieren;
+4. Home Assistant vollständig neu starten;
+5. unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Deploy Relay Agent** suchen;
+6. DRA konfigurieren.
 
 > [!WARNING]
 > Solange V1.0.0 noch als **RC3 / Finalkandidat** gekennzeichnet ist, ist der öffentliche HACS-Weg noch nicht als finaler Installationsweg freigegeben.
