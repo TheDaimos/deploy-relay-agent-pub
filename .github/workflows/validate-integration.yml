@@ -40,7 +40,7 @@ jobs:
           python -m json.tool deploy-relay.json >/dev/null
           python -m json.tool deploy-relay-channel.json >/dev/null
           python -m json.tool registry/projects.json >/dev/null
-          python -m json.tool docs/RC2_RUNTIME_PROVENANCE.json >/dev/null
+          python -m json.tool docs/RUNTIME_PROVENANCE.json >/dev/null
 
       - name: Verify public product identity
         run: |
@@ -80,8 +80,8 @@ jobs:
           import subprocess
           from pathlib import Path
 
-          provenance = json.loads(Path("docs/RC2_RUNTIME_PROVENANCE.json").read_text())
-          expected_commit = "42384a0813929ff325f92b05fa888d324faa3a31"
+          provenance = json.loads(Path("docs/RUNTIME_PROVENANCE.json").read_text())
+          expected_commit = "5550b40de7b7eb62439bd88ee175281fc5891d7d"
           if provenance["private_commit"] != expected_commit:
               raise SystemExit("Unexpected private RC2 provenance commit")
 
@@ -101,9 +101,9 @@ jobs:
                   )
 
           if failures:
-              raise SystemExit("RC2 runtime provenance mismatch:\n" + "\n".join(failures))
+              raise SystemExit("current runtime provenance mismatch:\n" + "\n".join(failures))
 
-          print(f"Verified {len(provenance['runtime_files'])} RC2 runtime files")
+          print(f"Verified {len(provenance['runtime_files'])} runtime files")
           PY
 
       - name: Reject private development source in public runtime
