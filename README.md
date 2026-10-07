@@ -7,6 +7,8 @@
 
 [Projektseite](https://thedaimos.github.io/deploy-relay-agent-pub/) · [Handbuch](docs/HANDBUCH.md) · [Installation](docs/INSTALLATION.md) · [V1 → V2](docs/V1_V2_ROADMAP.md) · [Releases](docs/RELEASES.md) · [Sicherheit](docs/SECURITY.md)
 
+![DRA V1 FINAL und DRA V2 Roadmap](assets/roadmap/dra-v1-v2-roadmap-hires.webp)
+
 ---
 
 ## DRA V1 — stabiler Deployment- und Recovery-Werkzeugkasten
@@ -115,6 +117,10 @@ DRA bleibt absichtlich restriktiv:
 - **[Sicherheit](docs/SECURITY.md)** — Sicherheitsversprechen
 - **[Support & Diagnose](docs/SUPPORT.md)** — Supportdaten und Fehleranalyse
 - **[FAQ](docs/FAQ.md)** — häufige Fragen
+- **[Fehlerbehebung](docs/TROUBLESHOOTING.md)** — typische Fehlerbilder und sichere Reaktion
+- **[Projektmanifest](docs/PROJECT_MANIFEST.md)** — Grundlagen von `deploy-relay.json`
+- **[V1 → V2 Upgrade](docs/UPGRADE_V1_TO_V2.md)** — Migrationsversprechen und Zielbild
+- **[V1 Release-Checkliste](docs/V1_RELEASE_CHECKLIST.md)** — Gate bis FINAL
 - **[Integrations-/Distributionsplan](docs/INTEGRATION_DISTRIBUTION_PLAN.md)** — DEV → Public → HACS
 
 ---
