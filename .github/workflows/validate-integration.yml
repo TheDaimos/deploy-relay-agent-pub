@@ -131,3 +131,42 @@ jobs:
           set -euo pipefail
           node --check custom_components/deploy_relay/frontend/deploy-relay-panel.js
           node --check custom_components/deploy_relay/frontend/deploy-relay-diagnostics.js
+
+      - name: Build deterministic manual release package
+        run: python scripts/build_release_package.py
+
+      - name: Verify release package
+        shell: bash
+        run: |
+          set -euo pipefail
+          sha256sum -c dist/deploy-relay-agent-v1.0.0.zip.sha256
+          first="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
+          python scripts/build_release_package.py
+          second="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
+          test "$first" = "$second"
+
+      - name: Verify manual archive contents
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+
+          archive = Path("dist/deploy-relay-agent-v1.0.0.zip")
+          root = "deploy-relay-agent-v1.0.0/"
+          required = {
+              root + "custom_components/deploy_relay/manifest.json",
+              root + "custom_components/deploy_relay/__init__.py",
+              root + "custom_components/deploy_relay/brand/icon.png",
+              root + "custom_components/deploy_relay/brand/icon@2x.png",
+              root + "LICENSE",
+              root + "COPYRIGHT.md",
+              root + "BRANDING.md",
+              root + "THIRD_PARTY.md",
+              root + "RUNTIME_PROVENANCE.json",
+          }
+          with zipfile.ZipFile(archive) as zf:
+              names = set(zf.namelist())
+          missing = sorted(required - names)
+          if missing:
+              raise SystemExit("release package missing:\n" + "\n".join(missing))
+          PY
