@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "projects": [
+    {
+      "id": "deploy_relay",
+      "name": "Deploy Relay Agent",
+      "repository": "TheDaimos/deploy-relay-agent-pub",
+      "manifest_path": "deploy-relay.json",
+      "status": "ready",
+      "channel": "stable"
+    }
+  ]
+}
