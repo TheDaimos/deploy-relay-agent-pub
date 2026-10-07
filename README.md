@@ -12,7 +12,7 @@
 **Exakter Commit · Vorschau · Sicherung · Verifikation · Rollback · Diagnose**
 
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Custom%20Integration-41BDF5?logo=home-assistant&logoColor=white)
-![Version](https://img.shields.io/badge/DRA-V1.0.0%20RC1-16c7ee)
+![Version](https://img.shields.io/badge/DRA-V1.0.0%20RC3-16c7ee)
 ![Status](https://img.shields.io/badge/V1-Finalkandidat-2ea96b)
 ![HACS](https://img.shields.io/badge/HACS-Ver%C3%B6ffentlichung%20in%20Vorbereitung-d6a648)
 ![V2](https://img.shields.io/badge/DRA%20V2-Roadmap%20festgelegt-d6a648)
@@ -28,7 +28,7 @@
 
 > [!IMPORTANT]
 > **DRA V1.0.0 befindet sich in der abschließenden Release-Candidate-Phase.**  
-> Die bewährte 0.15.30-Laufzeit wird als erste stabile DRA-Version veröffentlicht. Der öffentliche HACS-Installationsweg wird mit **V1 FINAL** freigegeben. Bis dahin bleibt die veröffentlichte Integrationsverteilung ausdrücklich als **in Vorbereitung** gekennzeichnet.
+> Der aktuelle Finalkandidat ist **DRA V1.0.0 RC3** (`5550b40d…`, Validate #785 SUCCESS). Die öffentliche Integrationsstruktur, HACS-Metadaten, Hassfest-Prüfung, Runtime-Provenienz und das reproduzierbare manuelle Releasepaket sind vorbereitet. Die Freigabe als **V1 FINAL** erfolgt erst nach vollständiger Realabnahme und erfolgreicher öffentlicher Installationsabnahme.
 
 <p align="center">
   <img
@@ -133,7 +133,7 @@ Nach Freigabe:
 5. DRA konfigurieren.
 
 > [!WARNING]
-> Solange V1.0.0 noch als **RC1** gekennzeichnet ist, ist der öffentliche HACS-Weg noch nicht als finaler Installationsweg freigegeben.
+> Solange V1.0.0 noch als **RC3 / Finalkandidat** gekennzeichnet ist, ist der öffentliche HACS-Weg noch nicht als finaler Installationsweg freigegeben.
 
 Vollständige Anleitung: **[docs/INSTALLATION.md](docs/INSTALLATION.md)**
 
