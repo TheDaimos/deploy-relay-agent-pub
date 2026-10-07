@@ -46,8 +46,11 @@ DEV candidate
 
 Bevor die Integrationsdateien aus dem privaten DEV-Repository in dieses öffentliche Repository übernommen werden, werden zusätzlich festgelegt und geprüft:
 
-- Lizenz-/Nutzungsmodell für den veröffentlichten Code;
-- welche Dateien öffentlich distribuiert werden;
+- [x] Lizenz-/Nutzungsmodell für den veröffentlichten Code festgelegt: `GPL-3.0-only`;
+- [x] Copyright-/Autorenschaft dokumentiert;
+- [x] Branding ausdrücklich vom GPL-Code getrennt;
+- [x] Drittkomponenten-/Abhängigkeitsaudit dokumentiert;
+- [ ] welche Integrationsdateien öffentlich distribuiert werden;
 - welche DEV-, Diagnose- und Recoveryartefakte ausdrücklich privat bleiben;
 - automatischer Secret-/Token-Scan;
 - HACS-Validierung;
@@ -87,3 +90,37 @@ deploy/dev
 ## V1 → V2
 
 Der öffentliche Integrationsweg soll später ein normales Update auf V2 ermöglichen. Config Entry, Projekte, Tokens, Backups und Optionen dürfen nicht durch den Architekturwechsel unnötig neu angelegt werden müssen.
+
+
+## Lizenz- und Copyright-Gate
+
+Status: **ABGESCHLOSSEN — 2026-10-07**
+
+Festgelegt:
+
+```text
+Code + Dokumentation:
+GPL-3.0-only
+
+Copyright:
+Copyright © 2026 Christian Köhler / TheDaimos
+
+Reserviert:
+Deploy Relay Agent / DRA
+offizielle Logos und Icons
+Artwork / Roadmapgrafiken
+visuelle Identität
+
+Drittkomponenten:
+keine vendorten Drittbibliotheken im V1-Integrationscode gefunden
+```
+
+Verbindliche Dateien:
+
+- `LICENSE`
+- `COPYRIGHT.md`
+- `AUTHORS.md`
+- `BRANDING.md`
+- `THIRD_PARTY.md`
+
+Damit ist das rechtliche Veröffentlichungsmodell für den öffentlichen V1-Code festgelegt.
