@@ -1,0 +1,30 @@
+{
+  "schema": "deploy-relay.deployment.v1",
+  "project": {
+    "id": "deploy_relay",
+    "name": "Deploy Relay Agent"
+  },
+  "source": {
+    "repository": "TheDaimos/deploy-relay-agent-pub",
+    "mode": "repository_contents"
+  },
+  "deployment": {
+    "root": "/config",
+    "groups": [
+      {
+        "id": "integration",
+        "source": "custom_components/deploy_relay",
+        "target": "custom_components/deploy_relay",
+        "mode": "replace_directory"
+      }
+    ]
+  },
+  "lifecycle": {
+    "after_install": "home_assistant_restart"
+  },
+  "policy": {
+    "allow_symlinks": false,
+    "max_files": 1000,
+    "max_uncompressed_bytes": 52428800
+  }
+}

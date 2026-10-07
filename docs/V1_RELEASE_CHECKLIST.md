@@ -4,10 +4,10 @@ Status: **ACTIVE — V1 Finalisierung**
 
 ## R1 — Runtime-Freeze
 
-- [ ] V1.0.0 RC auf exaktem Commit bestimmen
-- [ ] keine V2-Runtimeänderungen enthalten
-- [ ] CI grün
-- [ ] Runtime-Diff gegen 0.15.30 ausschließlich freigegeben
+- [x] V1.0.0 RC3 auf exaktem Commit `5550b40de7b7eb62439bd88ee175281fc5891d7d` bestimmt
+- [x] keine V2-Runtimeänderungen enthalten
+- [x] CI grün — Validate #785 SUCCESS
+- [x] Runtime-Diff gegen 0.15.30 auf V1-Release-/Public-Härtung begrenzt und dokumentiert
 
 ## R2 — Reale HA-Abnahme
 
@@ -36,10 +36,10 @@ Status: **ACTIVE — V1 Finalisierung**
 - [x] Sicherheitsdokumentation
 - [x] Support/Fehlerbehebung
 - [x] V1→V2-Upgradeversprechen
-- [ ] öffentliche Integrationsdateien
-- [ ] HACS-Metadaten
-- [ ] Lizenz-/Nutzungsentscheidung vor öffentlicher Codeverteilung
-- [ ] Release-Paket
+- [x] öffentliche Integrationsdateien aus RC3 deterministisch promoviert
+- [x] HACS-Metadaten vorbereitet
+- [x] GPL-3.0-only / Copyright / Branding / Drittkomponenten festgelegt
+- [x] deterministisches Release-Paket + SHA-256-Build vorbereitet
 
 ## R4 — Öffentliche Integration
 
@@ -52,10 +52,10 @@ README.md
 docs/
 ```
 
-- [ ] ausschließlich abgenommener Final-SHA
-- [ ] keine DEV-/Diagnoseartefakte
-- [ ] keine Tokens/Secrets
-- [ ] HACS-Validierung
+- [x] ausschließlich RC3-SHA mit Runtime-Provenienznachweis
+- [x] keine DEV-/Diagnoseartefakte im vorgesehenen Releasepaket
+- [x] keine Tokens/Secrets im Public-Paket; privater DEV-Repo-Pfad wird im Runtimecode CI-seitig abgewiesen
+- [ ] HACS-Validierung — nur Repository-Topics noch offen; Hassfest bereits SUCCESS
 - [ ] manuelle Installation prüfen
 - [ ] HACS-Installation prüfen
 - [ ] Updatepfad prüfen

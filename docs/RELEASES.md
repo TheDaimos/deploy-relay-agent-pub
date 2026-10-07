@@ -1,8 +1,8 @@
 # Deploy Relay Agent — Releases
 
-## DRA V1.0.0 — Release Candidate
+## DRA V1.0.0 RC3 — Finalkandidat
 
-V1 ist der stabile Abschluss der bisherigen DRA-Architektur.
+V1 ist der geplante stabile Abschluss der bisherigen DRA-Architektur. Der aktuelle Finalkandidat ist RC3 auf dem privaten Commit `5550b40de7b7eb62439bd88ee175281fc5891d7d` mit Validate #785 SUCCESS.
 
 ### Highlights
 
@@ -40,7 +40,7 @@ DRA V1:
 
 ### Final-Gate
 
-V1 wird erst als FINAL veröffentlicht, wenn der reale Home-Assistant-Abnahmelauf vollständig bestanden ist.
+V1 wird erst als FINAL veröffentlicht, wenn der reale Home-Assistant-Abnahmelauf **und** die öffentliche HACS-/Installationsabnahme vollständig bestanden sind.
 
 ---
 

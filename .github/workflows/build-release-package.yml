@@ -1,0 +1,42 @@
+name: Build DRA release package
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Build deterministic release archive
+        run: python scripts/build_release_package.py
+
+      - name: Rebuild and verify determinism
+        shell: bash
+        run: |
+          set -euo pipefail
+          first="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
+          python scripts/build_release_package.py
+          second="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
+          test "$first" = "$second"
+          (cd dist && sha256sum -c deploy-relay-agent-v1.0.0.zip.sha256)
+
+      - name: Upload release package artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: deploy-relay-agent-v1.0.0
+          path: |
+            dist/deploy-relay-agent-v1.0.0.zip
+            dist/deploy-relay-agent-v1.0.0.zip.sha256
+          if-no-files-found: error
