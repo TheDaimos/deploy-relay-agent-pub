@@ -1,0 +1,133 @@
+name: Validate DRA public integration
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hacs-integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: HACS integration validation
+        uses: hacs/action@main
+        with:
+          category: integration
+
+  hassfest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: home-assistant/actions/hassfest@master
+
+  release-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+
+      - name: Validate JSON metadata
+        run: |
+          python -m json.tool hacs.json >/dev/null
+          python -m json.tool custom_components/deploy_relay/manifest.json >/dev/null
+          python -m json.tool deploy-relay.json >/dev/null
+          python -m json.tool deploy-relay-channel.json >/dev/null
+          python -m json.tool registry/projects.json >/dev/null
+          python -m json.tool docs/RC2_RUNTIME_PROVENANCE.json >/dev/null
+
+      - name: Verify public product identity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          manifest = json.loads(Path("custom_components/deploy_relay/manifest.json").read_text())
+          assert manifest["domain"] == "deploy_relay"
+          assert manifest["version"] == "1.0.0"
+          assert manifest["documentation"] == "https://github.com/TheDaimos/deploy-relay-agent-pub"
+          assert manifest["issue_tracker"] == "https://github.com/TheDaimos/deploy-relay-agent-pub/issues"
+
+          deployment = json.loads(Path("deploy-relay.json").read_text())
+          assert deployment["project"]["id"] == "deploy_relay"
+          assert deployment["source"]["repository"] == "TheDaimos/deploy-relay-agent-pub"
+
+          channel = json.loads(Path("deploy-relay-channel.json").read_text())
+          assert channel["project_id"] == "deploy_relay"
+          assert channel["recommended"] == {
+              "channel": "stable",
+              "kind": "branch",
+              "ref": "stable",
+          }
+
+          catalog = json.loads(Path("registry/projects.json").read_text())
+          project = catalog["projects"][0]
+          assert project["id"] == "deploy_relay"
+          assert project["repository"] == "TheDaimos/deploy-relay-agent-pub"
+          assert project["channel"] == "stable"
+          PY
+
+      - name: Verify byte-identical RC2 runtime promotion
+        run: |
+          python - <<'PY'
+          import json
+          import subprocess
+          from pathlib import Path
+
+          provenance = json.loads(Path("docs/RC2_RUNTIME_PROVENANCE.json").read_text())
+          expected_commit = "42384a0813929ff325f92b05fa888d324faa3a31"
+          if provenance["private_commit"] != expected_commit:
+              raise SystemExit("Unexpected private RC2 provenance commit")
+
+          failures = []
+          for path, expected_blob in provenance["runtime_files"].items():
+              file_path = Path(path)
+              if not file_path.is_file():
+                  failures.append(f"missing: {path}")
+                  continue
+              actual_blob = subprocess.check_output(
+                  ["git", "hash-object", path],
+                  text=True,
+              ).strip()
+              if actual_blob != expected_blob:
+                  failures.append(
+                      f"{path}: expected {expected_blob}, got {actual_blob}"
+                  )
+
+          if failures:
+              raise SystemExit("RC2 runtime provenance mismatch:\n" + "\n".join(failures))
+
+          print(f"Verified {len(provenance['runtime_files'])} RC2 runtime files")
+          PY
+
+      - name: Reject private development source in public runtime
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -R -n --fixed-string "TheDaimos/deploy-relay-agent-dev" custom_components/deploy_relay; then
+            echo "Public runtime still references the private DRA development repository."
+            exit 1
+          fi
+
+      - name: Verify integration branding
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s custom_components/deploy_relay/brand/icon.png
+          test -s custom_components/deploy_relay/brand/icon@2x.png
+
+      - name: Compile Python
+        run: python -m compileall -q custom_components/deploy_relay
+
+      - name: Check frontend JavaScript
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check custom_components/deploy_relay/frontend/deploy-relay-panel.js
+          node --check custom_components/deploy_relay/frontend/deploy-relay-diagnostics.js
