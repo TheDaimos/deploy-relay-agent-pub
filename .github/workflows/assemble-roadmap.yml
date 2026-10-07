@@ -1,0 +1,42 @@
+name: Assemble DRA roadmap asset
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - ".asset-build/roadmap/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Assemble high-resolution roadmap
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/roadmap
+          cat .asset-build/roadmap/chunk-*.b64 | tr -d '\n\r' | base64 --decode > assets/roadmap/dra-v1-v2-roadmap-hires.webp
+          test "$(wc -c < assets/roadmap/dra-v1-v2-roadmap-hires.webp)" -eq 426130
+          echo "288e42381a6732cc71f01e899aff08022ba951a1d38caecd65b4e84147f13515  assets/roadmap/dra-v1-v2-roadmap-hires.webp" | sha256sum --check
+
+      - name: Commit assembled asset
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- assets/roadmap/dra-v1-v2-roadmap-hires.webp; then
+            echo "Asset already current."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/roadmap/dra-v1-v2-roadmap-hires.webp
+          git commit -m "assets: assemble DRA V1-V2 roadmap hi-res [skip ci]"
+          git push
