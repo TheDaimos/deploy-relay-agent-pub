@@ -53,7 +53,7 @@
             "github_token": "GitHub read token"
           },
           "data_description": {
-            "repository": "Use owner/repository or a full https://github.com repository URL.",
+            "repository": "Use owner/repository or a full GitHub repository URL.",
             "manifest_path": "Path to the versioned Deploy Relay manifest in the repository. Usually deploy-relay.json.",
             "github_token": "Optional for public repositories. For private repositories, use a fine-grained token restricted to this repository with read access to metadata and contents."
           }
@@ -77,7 +77,7 @@
             "clear_github_token": "Remove stored token"
           },
           "data_description": {
-            "repository": "Use owner/repository or a full https://github.com repository URL.",
+            "repository": "Use owner/repository or a full GitHub repository URL.",
             "manifest_path": "Path to the versioned Deploy Relay manifest in the repository.",
             "github_token": "Enter a token only when it should replace the currently stored project token.",
             "clear_github_token": "Removes the stored token before checking the repository. Use this when the project is public or no longer needs authentication."

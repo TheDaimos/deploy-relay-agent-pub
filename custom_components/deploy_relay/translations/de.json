@@ -53,7 +53,7 @@
             "github_token": "GitHub-Lesetoken"
           },
           "data_description": {
-            "repository": "Verwende Besitzer/Repository oder die vollständige https://github.com-Repository-URL.",
+            "repository": "Verwende Besitzer/Repository oder eine vollständige GitHub-Repository-URL.",
             "manifest_path": "Pfad zum versionierten Deploy-Relay-Manifest im Repository. Normalerweise deploy-relay.json.",
             "github_token": "Für öffentliche Repositories optional. Für private Repositories sollte der fein granulare Token auf dieses Repository beschränkt sein und nur Metadaten sowie Inhalte lesen dürfen."
           }
@@ -77,7 +77,7 @@
             "clear_github_token": "Gespeicherten Token entfernen"
           },
           "data_description": {
-            "repository": "Verwende Besitzer/Repository oder die vollständige https://github.com-Repository-URL.",
+            "repository": "Verwende Besitzer/Repository oder eine vollständige GitHub-Repository-URL.",
             "manifest_path": "Pfad zum versionierten Deploy-Relay-Manifest im Repository.",
             "github_token": "Nur ausfüllen, wenn der bisher gespeicherte Projekttoken ersetzt werden soll.",
             "clear_github_token": "Entfernt den gespeicherten Token vor der Prüfung. Sinnvoll, wenn das Projekt öffentlich ist oder keine Anmeldung mehr benötigt."
