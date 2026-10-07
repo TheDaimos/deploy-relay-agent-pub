@@ -32,13 +32,21 @@ main{padding:34px 0 72px}.frame{position:relative;padding:2px;border-radius:28px
 .arch{display:grid;grid-template-columns:1fr 54px 1fr 54px 1fr;align-items:center;gap:10px;margin-top:18px}.archbox{padding:18px;border-radius:15px;border:1px solid rgba(77,217,255,.22);background:#08151e}.archbox b{display:block;margin-bottom:6px}.archbox span{color:#8097a4;font-size:.88rem}.arrow{text-align:center;color:#5cd8fb;font-size:24px}
 .code{margin-top:18px;padding:17px;border-radius:14px;border:1px solid rgba(38,88,113,.62);background:#03090d;font:12px/1.65 ui-monospace,SFMono-Regular,Consolas,monospace;color:#c1e6f0;overflow:auto;white-space:pre-wrap}.code .green{color:var(--green)}.code .amber{color:var(--amber)}.code .red{color:var(--red)}
 .footer{padding:22px 46px 24px;border-top:1px solid rgba(217,170,87,.15);display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;color:#788b98;font-size:.78rem}.footer-left{display:flex;align-items:center;gap:13px;min-width:0}.footer-logo{width:78px;height:78px;object-fit:contain;flex:0 0 auto;filter:drop-shadow(0 0 8px rgba(211,174,96,.10))}.footer-copy{min-width:0;line-height:1.35;display:flex;flex-direction:column;justify-content:center}.footer-copy strong{display:block;color:#d9c18b;letter-spacing:.025em}.footer-sub{color:#858f9c;font-size:.92rem}.footer-right{display:flex;align-items:center;justify-content:flex-end;min-width:0}.footer-ornament{width:min(360px,34vw);height:auto;flex:0 0 auto;object-fit:contain;opacity:.88;filter:drop-shadow(0 0 7px rgba(211,174,96,.08))}.footer-links{display:flex;align-items:center;gap:8px;white-space:nowrap;margin-top:5px;font-size:.84rem}.footer a{text-decoration:none;color:#adc3cf}.footer a:hover{color:#f0d198}
-@media(max-width:980px){.hero{grid-template-columns:1fr}.console{min-height:auto}.flow{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}}
-@media(max-width:620px){.shell{width:min(var(--max),calc(100% - 20px))}.topbar__inner{min-height:58px}.topbar nav a:nth-child(2){display:none}.hero,.section{padding:30px 20px}.footer{padding:18px 20px 20px;flex-direction:column;align-items:flex-start;gap:18px}.footer-logo{width:68px;height:68px}.footer-right{width:100%;justify-content:flex-end}.footer-ornament{width:min(230px,58vw)}.hero h1{font-size:2.7rem;white-space:normal;line-height:1.02}.logo{width:88px;height:88px}.pipe-row{grid-template-columns:76px 1fr 78px}.flow,.grid{grid-template-columns:1fr}.stage:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-18px}.console{border-radius:16px}.terminal{font-size:11px}}
+
+.release-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;border-bottom:1px solid rgba(217,170,87,.14);background:rgba(217,170,87,.10)}
+.release-cell{padding:17px 22px;background:linear-gradient(160deg,rgba(7,18,25,.98),rgba(4,10,14,.99));display:flex;gap:12px;align-items:center}.release-cell b{display:block;color:#eef9fd;font-size:.9rem}.release-cell span{display:block;color:#8096a3;font-size:.79rem;margin-top:3px}.status-led{width:10px;height:10px;border-radius:50%;flex:0 0 auto;background:var(--cyan);box-shadow:0 0 13px rgba(77,217,255,.55)}.status-led.green{background:var(--green);box-shadow:0 0 13px rgba(94,230,155,.48)}.status-led.gold{background:var(--gold2);box-shadow:0 0 13px rgba(217,170,87,.48)}
+.roadmap-wrap{margin-top:24px;padding:10px;border-radius:20px;background:linear-gradient(135deg,rgba(77,217,255,.34),rgba(217,170,87,.35));box-shadow:0 22px 55px rgba(0,0,0,.32)}.roadmap-inner{overflow:hidden;border-radius:14px;background:#03070a;border:1px solid rgba(255,255,255,.04)}.roadmap-art{display:block;width:100%;height:auto;aspect-ratio:3344/1882;object-fit:cover;background:radial-gradient(circle at 22% 40%,rgba(77,217,255,.14),transparent 30%),radial-gradient(circle at 78% 40%,rgba(217,170,87,.14),transparent 30%),#050a0e}.roadmap-caption{padding:15px 17px;display:flex;justify-content:space-between;gap:18px;align-items:center;background:linear-gradient(180deg,rgba(12,25,34,.98),rgba(5,12,17,.99));color:#8fa4b0;font-size:.86rem;line-height:1.55}.roadmap-caption strong{color:#e9f8fd}.roadmap-caption a{color:#f0cf8c;text-decoration:none;font-weight:800;white-space:nowrap}
+.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}.compare{padding:22px;border-radius:18px;border:1px solid rgba(77,217,255,.20);background:linear-gradient(160deg,rgba(8,24,34,.98),rgba(4,11,16,.99))}.compare.v2{border-color:rgba(217,170,87,.35);box-shadow:inset 0 0 32px rgba(217,170,87,.025)}.compare-kicker{font:900 10px/1 ui-monospace,monospace;letter-spacing:.16em;text-transform:uppercase;color:#67dfff}.compare.v2 .compare-kicker{color:#efc875}.compare h3{margin:9px 0 12px;font-size:1.35rem}.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:8px;color:#99adb9;font-size:.9rem;line-height:1.45}.compare li:before{content:"✓";color:var(--green);font-weight:900;margin-right:9px}.compare.v2 li:before{color:#efc875}
+.tech-note{margin-top:18px;padding:16px 18px;border-radius:14px;border:1px solid rgba(241,198,110,.25);background:rgba(67,48,19,.18);color:#aebbc3;line-height:1.65;font-size:.9rem}.tech-note strong{color:#f1d79d}
+.performance-row{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:18px}.perf{padding:16px;border-radius:14px;border:1px solid rgba(38,88,113,.52);background:rgba(5,14,20,.85)}.perf b{display:block;color:#e6f6fb;margin-bottom:7px}.perf span{color:#8299a6;font-size:.84rem;line-height:1.5}
+.install-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px;margin-top:20px}.install-box{padding:22px;border-radius:18px;border:1px solid rgba(94,230,155,.22);background:linear-gradient(155deg,rgba(9,31,25,.55),rgba(5,13,17,.96))}.install-box.alt{border-color:rgba(217,170,87,.28);background:linear-gradient(155deg,rgba(45,31,13,.42),rgba(5,13,17,.96))}.install-box h3{margin:0 0 9px}.install-box p{color:#92a6b2;line-height:1.62}.doclinks{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.doclinks a{padding:8px 10px;border-radius:9px;border:1px solid rgba(77,217,255,.24);text-decoration:none;font-size:.82rem;font-weight:800;color:#c9eef8;background:rgba(6,25,35,.55)}
+@media(max-width:980px){.hero{grid-template-columns:1fr}.console{min-height:auto}.flow{grid-template-columns:repeat(3,1fr)}.grid{grid-template-columns:1fr 1fr}.arch{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}.compare-grid,.install-grid{grid-template-columns:1fr}.performance-row{grid-template-columns:1fr 1fr}.release-strip{grid-template-columns:1fr}}
+@media(max-width:620px){.shell{width:min(var(--max),calc(100% - 20px))}.topbar__inner{min-height:58px}.topbar nav a:nth-child(2){display:none}.hero,.section{padding:30px 20px}.footer{padding:18px 20px 20px;flex-direction:column;align-items:flex-start;gap:18px}.footer-logo{width:68px;height:68px}.footer-right{width:100%;justify-content:flex-end}.footer-ornament{width:min(230px,58vw)}.hero h1{font-size:2.7rem;white-space:normal;line-height:1.02}.logo{width:88px;height:88px}.pipe-row{grid-template-columns:76px 1fr 78px}.flow,.grid,.performance-row{grid-template-columns:1fr}.stage:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-18px}.console{border-radius:16px}.terminal{font-size:11px}.roadmap-caption{align-items:flex-start;flex-direction:column}.roadmap-caption a{white-space:normal}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
 </style>
 </head>
 <body>
-<header class="topbar"><div class="shell topbar__inner"><a class="brand" href="#top"><span class="brandmark">DRA</span><span>Deploy Relay Agent</span></a><nav><a href="#pipeline">Pipeline</a><a href="#sicherheit">Sicherheit</a><a href="#diagnose">Diagnose</a><a href="https://thedaimos.github.io/project-hub/" target="_blank" rel="noopener noreferrer">Meine Projekte</a></nav></div></header>
+<header class="topbar"><div class="shell topbar__inner"><a class="brand" href="#top"><span class="brandmark">DRA</span><span>Deploy Relay Agent</span></a><nav><a href="#v1v2">V1 → V2</a><a href="#pipeline">Pipeline</a><a href="#sicherheit">Sicherheit</a><a href="#installation">Installation</a><a href="https://thedaimos.github.io/project-hub/" target="_blank" rel="noopener noreferrer">Meine Projekte</a></nav></div></header>
 <main id="top"><div class="shell"><div class="frame"><div class="surface">
 <section class="hero">
 <div class="console" aria-label="Schematische Deployment-Konsole">
@@ -54,13 +62,71 @@ main{padding:34px 0 72px}.frame{position:relative;padding:2px;border-radius:28px
 </div></div>
 <div>
 <div class="logo" role="img" aria-label="Deploy Relay Agent Logo"></div>
-<div class="eyebrow">Controlled delivery · Home Assistant DEV</div>
+<div class="eyebrow">DRA V1.0.0 · Release Candidate · Home Assistant</div>
 <h1><span class="title-main">Deploy Relay</span> <span class="title-accent">Agent</span></h1>
 <p class="claim">Git hinein. Nachweisbarer Zustand heraus.</p>
 <p class="lead">DRA ist ein kontrollierter Deploymentpfad für Home-Assistant-Entwicklungsumgebungen: bewegliche Git-Quellen werden auf einen exakten Commit eingefroren, reale Dateidifferenzen sichtbar gemacht, Zielzustände gesichert, Änderungen gestaged und der installierte Stand abschließend verifiziert.</p>
-<div class="badges"><span class="badge gold">Private DEV Core</span><span class="badge">Immutable SHA</span><span class="badge green">Backup + Verify</span><span class="badge">Fail closed</span></div>
-<div class="actions"><a class="btn primary" href="https://github.com/TheDaimos/deploy-relay-agent-pub-pub" target="_blank" rel="noopener noreferrer">GitHub · Projektseite</a><a class="btn" href="#pipeline">Technik ansehen</a><a class="btn" href="https://thedaimos.github.io/project-hub/" target="_blank" rel="noopener noreferrer">Meine Projekte</a></div>
+<div class="badges"><span class="badge green">V1 FINAL candidate</span><span class="badge">Immutable SHA</span><span class="badge green">Backup + Verify</span><span class="badge gold">V2 Roadmap fixed</span></div>
+<div class="actions"><a class="btn primary" href="https://github.com/TheDaimos/deploy-relay-agent-pub" target="_blank" rel="noopener noreferrer">GitHub · Projektseite</a><a class="btn" href="#v1v2">V1 → V2 ansehen</a><a class="btn" href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/HANDBUCH.md" target="_blank" rel="noopener noreferrer">Handbuch</a><a class="btn" href="https://thedaimos.github.io/project-hub/" target="_blank" rel="noopener noreferrer">Meine Projekte</a></div>
 </div>
+</section>
+
+<div class="release-strip" aria-label="DRA Release-Status">
+  <div class="release-cell"><span class="status-led green"></span><div><b>DRA V1.0.0 · Finalkandidat</b><span>Bewährte 0.15.30-Runtime wird als stabile Integration abgeschlossen.</span></div></div>
+  <div class="release-cell"><span class="status-led"></span><div><b>Integration & Distribution</b><span>HACS-/Release-Auftritt wird für V1 FINAL vorbereitet.</span></div></div>
+  <div class="release-cell"><span class="status-led gold"></span><div><b>DRA V2 · Architektur geplant</b><span>Serverseitige Aufträge, Reconnect, Multi-Core, Pagination und Mobile-Härtung.</span></div></div>
+</div>
+
+<section class="section" id="v1v2">
+  <p class="section-label">Evolution · V1 → V2</p>
+  <h2>V1 fertig machen. Danach den Deploymentablauf auf die nächste Ebene heben.</h2>
+  <p class="section-intro">DRA V1 ist der stabile Deployment- und Recovery-Werkzeugkasten. V2 ersetzt diese Basis nicht, sondern verschiebt den Besitz langer Abläufe vollständig zum Home-Assistant-Server: Ein Auftrag soll unabhängig davon weiterlaufen, welches Gerät ihn gestartet hat und ob LAN, WLAN, Mobilfunk oder VPN gerade wechseln.</p>
+
+  <div class="roadmap-wrap">
+    <div class="roadmap-inner">
+      <img class="roadmap-art" src="assets/roadmap/dra-v1-v2-roadmap-hires.webp" alt="DRA V1 und DRA V2 im Vergleich: V1 stabiler Deployment-Workflow, V2 serverseitige Aufträge, Reconnect, Multi-Core, Pagination, Mobile- und Akkuoptimierung">
+      <div class="roadmap-caption">
+        <div><strong>DRA V1 FINAL → DRA V2 Roadmap</strong><br>Die Grafik zeigt die Produktentwicklung vom heute bewährten Ablauf zur robusten serverseitigen Deployment-Engine.</div>
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/V1_V2_ROADMAP.md" target="_blank" rel="noopener noreferrer">Roadmap im Detail →</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="compare-grid">
+    <article class="compare">
+      <div class="compare-kicker">DRA V1 · stabil & bewährt</div>
+      <h3>Der sichere Weg für heutige Projekte</h3>
+      <ul>
+        <li>Commit-SHA Freeze, Preview und SHA-256</li>
+        <li>Backup, Rollback und Wiederherstellung</li>
+        <li>Explizites LOCKED → DEVELOPMENT-Modell</li>
+        <li>Sammelupdate und Lifecycle-Entscheidung</li>
+        <li>Diagnose und separater Git-Export</li>
+        <li>Desktop, Tablet und Companion App</li>
+      </ul>
+    </article>
+    <article class="compare v2">
+      <div class="compare-kicker">DRA V2 · nächste Generation</div>
+      <h3>Server besitzt und vollendet den Auftrag</h3>
+      <ul>
+        <li>Operation-ID statt langlebigem Client-Request</li>
+        <li>Reconnect und Clientwechsel</li>
+        <li>Sammelupdate vollständig im Backend</li>
+        <li>kontrollierte Multi-Core-/Worker-Nutzung</li>
+        <li>Pagination großer Vorschauen</li>
+        <li>weniger lokale WebView- und Akkulast</li>
+      </ul>
+    </article>
+  </div>
+
+  <div class="tech-note"><strong>Technische Einordnung:</strong> DRA V1 führt die schwere Git-, Datei-, Hash-, Backup- und Installationsarbeit bereits im Home-Assistant-Backend aus. V2 verschiebt zusätzlich <strong>Auftragsbesitz, Orchestrierung, Fortschritt und Wiederanbindung</strong> auf den Server. Dadurch wird der Ablauf deutlich weniger von Browserleistung, Companion-WebView und einer dauerhaft stabilen Clientverbindung abhängig.</div>
+
+  <div class="performance-row">
+    <div class="perf"><b>Mehr Performance</b><span>Sichere read-only Phasen können nach Messung begrenzt parallelisiert werden.</span></div>
+    <div class="perf"><b>Multi-Core mit Maß</b><span>Workerzahlen entstehen aus Benchmarks – nicht aus „12 vCPU = 12 Worker“.</span></div>
+    <div class="perf"><b>Weniger lokale Last</b><span>Keine künstlichen Fortschrittstimer und deutlich weniger Voll-Renders auf Mobile.</span></div>
+    <div class="perf"><b>Verbindungsunabhängig</b><span>WLAN, Mobilfunk, VPN oder Clientwechsel sollen einen Serverauftrag nicht stoppen.</span></div>
+  </div>
 </section>
 
 <section class="section" id="pipeline"><p class="section-label">Deployment Pipeline</p><h2>Eine Transaktion. Sechs kontrollierte Schritte.</h2><p class="section-intro">DRA behandelt ein Deployment nicht als Dateikopie, sondern als reproduzierbare Transaktion. Die Auswahl kann ein Branch sein – die ausgeführte Transaktion gehört anschließend dem eingefrorenen Commit.</p>
@@ -114,6 +180,32 @@ or <span class="red">RECOVERY_REQUIRED</span></div>
 <article class="card"><h3>Kein freier Dateischreiber</h3><p>Die Zielgrenzen und zulässigen Pfade sind Teil des Sicherheitsvertrags.</p></article>
 <article class="card"><h3>Kein stiller Updater</h3><p>Auswahl, Vorschau, Freigabe und Nachaktion bleiben sichtbar und bewusst.</p></article>
 </div></section>
+
+<section class="section" id="installation">
+  <p class="section-label">V1 Productization</p>
+  <h2>Von der funktionierenden DEV-Integration zum vollständigen V1-Release.</h2>
+  <p class="section-intro">V1 wird vor dem V2-Umbau als vollständige Home-Assistant-Integration abgeschlossen. Dazu gehören ein sauberer stabiler Distributionsweg, HACS-Vorbereitung, Installations- und Updateanleitung, Release Notes, Handbuch, Sicherheitsdokumentation und ein klarer späterer Upgradepfad V1 → V2.</p>
+  <div class="install-grid">
+    <article class="install-box">
+      <h3>V1 Installation</h3>
+      <p>Der bevorzugte Endnutzerweg wird HACS. Bis zur bestandenen Finalabnahme bleibt V1.0.0 als Release Candidate gekennzeichnet; danach folgt der unveränderliche stabile Release.</p>
+      <div class="doclinks">
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/INSTALLATION.md" target="_blank" rel="noopener noreferrer">Installationsanleitung</a>
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/HANDBUCH.md" target="_blank" rel="noopener noreferrer">Handbuch</a>
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/FAQ.md" target="_blank" rel="noopener noreferrer">FAQ</a>
+      </div>
+    </article>
+    <article class="install-box alt">
+      <h3>Release & Zukunft</h3>
+      <p>Der öffentliche Bereich zeigt nur freigegebene Produktstände. Private Entwicklung, interne Diagnoseexports und V2-Arbeit bleiben davon getrennt.</p>
+      <div class="doclinks">
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/RELEASES.md" target="_blank" rel="noopener noreferrer">Releaseinformationen</a>
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/SECURITY.md" target="_blank" rel="noopener noreferrer">Sicherheit</a>
+        <a href="https://github.com/TheDaimos/deploy-relay-agent-pub/blob/main/docs/INTEGRATION_DISTRIBUTION_PLAN.md" target="_blank" rel="noopener noreferrer">Distributionsplan</a>
+      </div>
+    </article>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="footer-left">
