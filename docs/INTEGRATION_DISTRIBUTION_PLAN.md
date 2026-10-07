@@ -42,6 +42,19 @@ DEV candidate
 → HACS/release
 ```
 
+## Vor öffentlicher Codeverteilung
+
+Bevor die Integrationsdateien aus dem privaten DEV-Repository in dieses öffentliche Repository übernommen werden, werden zusätzlich festgelegt und geprüft:
+
+- Lizenz-/Nutzungsmodell für den veröffentlichten Code;
+- welche Dateien öffentlich distribuiert werden;
+- welche DEV-, Diagnose- und Recoveryartefakte ausdrücklich privat bleiben;
+- automatischer Secret-/Token-Scan;
+- HACS-Validierung;
+- reproduzierbare Zuordnung zum exakten V1-Final-SHA.
+
+Die Produktseite und Dokumentation können bereits öffentlich sein. Der Integrationscode wird erst nach dieser Freigabe promotet.
+
 ## Geplante HACS-Struktur
 
 ```text
