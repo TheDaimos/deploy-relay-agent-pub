@@ -73,7 +73,7 @@ jobs:
           assert project["channel"] == "stable"
           PY
 
-      - name: Verify byte-identical RC2 runtime promotion
+      - name: Verify byte-identical RC3 runtime promotion
         run: |
           python - <<'PY'
           import json
@@ -83,7 +83,7 @@ jobs:
           provenance = json.loads(Path("docs/RUNTIME_PROVENANCE.json").read_text())
           expected_commit = "5550b40de7b7eb62439bd88ee175281fc5891d7d"
           if provenance["private_commit"] != expected_commit:
-              raise SystemExit("Unexpected private RC2 provenance commit")
+              raise SystemExit("Unexpected private RC3 provenance commit")
 
           failures = []
           for path, expected_blob in provenance["runtime_files"].items():
@@ -139,7 +139,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          sha256sum -c dist/deploy-relay-agent-v1.0.0.zip.sha256
+          (cd dist && sha256sum -c deploy-relay-agent-v1.0.0.zip.sha256)
           first="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
           python scripts/build_release_package.py
           second="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
