@@ -16,6 +16,7 @@
 ![Status](https://img.shields.io/badge/V1-Finalkandidat-2ea96b)
 ![HACS](https://img.shields.io/badge/HACS-Ver%C3%B6ffentlichung%20in%20Vorbereitung-d6a648)
 ![V2](https://img.shields.io/badge/DRA%20V2-Roadmap%20festgelegt-d6a648)
+![License](https://img.shields.io/badge/Code-GPL--3.0--only-lightgrey)
 
 **[🚀 Projektseite](https://thedaimos.github.io/deploy-relay-agent-pub/)** ·
 **[📦 Installation](docs/INSTALLATION.md)** ·
@@ -50,7 +51,8 @@
 [Sicherheitsmodell](#sicherheitsmodell) ·
 [Diagnose](#diagnose--nachvollziehbarkeit) ·
 [DRA V2](#dra-v2--die-nächste-generation) ·
-[Dokumentation](#dokumentation)
+[Dokumentation](#dokumentation) ·
+[Lizenz](#lizenz-und-branding)
 
 ---
 
@@ -358,6 +360,7 @@ Die ausführliche öffentliche DRA-Projektseite mit V1-/V2-Evolution, visueller 
 | **[V1 → V2 Upgrade](docs/UPGRADE_V1_TO_V2.md)** | Migrationsversprechen |
 | **[V1 Release-Checkliste](docs/V1_RELEASE_CHECKLIST.md)** | Gate bis FINAL |
 | **[Distributionsplan](docs/INTEGRATION_DISTRIBUTION_PLAN.md)** | DEV → Public → HACS |
+| **[Drittkomponenten](THIRD_PARTY.md)** | Runtime-/Plattformabhängigkeiten und Auditstatus |
 
 ---
 
@@ -366,6 +369,18 @@ Die ausführliche öffentliche DRA-Projektseite mit V1-/V2-Evolution, visueller 
 Dieses öffentliche Repository ist der **Produkt-, Dokumentations- und zukünftige Distributionspunkt** für freigegebene DRA-Versionen.
 
 Private Entwicklung, interne Diagnoseexports und Recovery-/DEV-Artefakte bleiben davon getrennt.
+
+---
+
+# Lizenz und Branding
+
+Soweit nicht ausdrücklich reservierte Branding-Materialien oder Drittmaterial mit eigener Lizenz betroffen sind, stehen Quellcode und Dokumentation unter **GNU GPL Version 3 only (`GPL-3.0-only`)**.
+
+Copyright © 2026 **Christian Köhler / TheDaimos**.
+
+Siehe [LICENSE](LICENSE), [COPYRIGHT.md](COPYRIGHT.md), [AUTHORS.md](AUTHORS.md), [BRANDING.md](BRANDING.md) und [THIRD_PARTY.md](THIRD_PARTY.md).
+
+Der Name **Deploy Relay Agent / DRA**, Logos, Icons, Artwork und die visuelle Identität sind nicht Bestandteil der GPL-3.0-only-Freigabe. Forks und abgeleitete Projekte müssen ein eigenes Branding verwenden, sofern keine separate Erlaubnis vorliegt.
 
 ---
 
