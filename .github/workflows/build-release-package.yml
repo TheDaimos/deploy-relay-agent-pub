@@ -30,7 +30,7 @@ jobs:
           python scripts/build_release_package.py
           second="$(sha256sum dist/deploy-relay-agent-v1.0.0.zip | awk '{print $1}')"
           test "$first" = "$second"
-          sha256sum -c dist/deploy-relay-agent-v1.0.0.zip.sha256
+          (cd dist && sha256sum -c deploy-relay-agent-v1.0.0.zip.sha256)
 
       - name: Upload release package artifact
         uses: actions/upload-artifact@v4
