@@ -1,12 +1,12 @@
 # Deploy Relay Agent V1 — Installation
 
-> Status: **V1.0.0 Release Candidate**  
-> Öffentliche Integrationsverteilung: **in Vorbereitung**  
+> Status: **V1.0.0 RC3 · Finalkandidat**  
+> Öffentliche Integrationsverteilung: **technisch vorbereitet · noch nicht FINAL freigegeben**  
 > DRA V2 ist eine spätere Architekturentwicklung und nicht Bestandteil der V1-Installation.
 
 ## Zielbild
 
-DRA V1 soll als normale Home-Assistant-Custom-Integration installierbar sein. Die öffentliche Distribution wird bewusst vom privaten Entwicklungsrepository getrennt:
+DRA V1 ist als normale Home-Assistant-Custom-Integration für die öffentliche Distribution vorbereitet. Die öffentliche Distribution wird bewusst vom privaten Entwicklungsrepository getrennt:
 
 ```text
 privates DEV-Repository
@@ -25,7 +25,7 @@ Der öffentliche Stand enthält ausschließlich freigegebene Release-Inhalte. Di
 
 ## Geplanter bevorzugter Installationsweg — HACS
 
-Nach Abschluss der V1-Finalabnahme soll DRA über HACS als benutzerdefiniertes Repository installierbar sein.
+Nach Abschluss der V1-Finalabnahme wird DRA über HACS als benutzerdefiniertes Repository freigegeben. Die HACS-Struktur und Metadaten sind im RC3-Public-Kandidaten bereits vorhanden.
 
 1. HACS öffnen.
 2. **Integrationen** öffnen.
@@ -94,4 +94,4 @@ Eine Neuinstallation nur wegen V2 ist ausdrücklich nicht das Ziel.
 
 ## Noch nicht freigegeben
 
-Solange V1.0.0 noch Release Candidate ist, sind öffentliche HACS- und Release-Installationsschritte als **Zielzustand** dokumentiert. Die echte Freigabe erfolgt erst nach bestandener V1-Finalabnahme.
+Solange V1.0.0 noch RC3 / Finalkandidat ist, dienen die öffentlichen Installationsschritte der Abnahme und Vorbereitung. Die Freigabe für normale Nutzung erfolgt erst nach bestandener V1-Final- und Distributionsabnahme.
