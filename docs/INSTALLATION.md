@@ -27,11 +27,17 @@ Der öffentliche Stand enthält ausschließlich freigegebene Release-Inhalte. Di
 
 Nach Abschluss der V1-Finalabnahme wird DRA über HACS als benutzerdefiniertes Repository freigegeben. Die HACS-Struktur und Metadaten sind im RC3-Public-Kandidaten bereits vorhanden.
 
+**Repository für HACS — Copy & Paste:**
+
+```text
+https://github.com/TheDaimos/deploy-relay-agent-pub
+```
+
 1. HACS öffnen.
 2. **Integrationen** öffnen.
 3. Über das Menü **Benutzerdefinierte Repositories** auswählen.
-4. Das öffentliche DRA-Repository hinzufügen.
-5. Kategorie **Integration** auswählen.
+4. die oben angegebene Repository-URL einfügen.
+5. Kategorie **Integration** auswählen und das Repository hinzufügen.
 6. **Deploy Relay Agent** installieren.
 7. Home Assistant vollständig neu starten.
 8. Unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Deploy Relay Agent** suchen.
