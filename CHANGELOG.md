@@ -1,8 +1,8 @@
 # Deploy Relay Agent — Public Changelog
 
-## V1.0.0 RC3 — Finalkandidat
+## V1.0.0 FINAL — 2026-10-09
 
-DRA V1 wird als vollständige Home-Assistant-Integration und stabiler Rückfallstand abgeschlossen.
+DRA V1.0.0 ist als vollständige Home-Assistant-Integration und stabiler Rückfallstand freigegeben.
 
 ### RC3
 
@@ -29,14 +29,14 @@ DRA V1 wird als vollständige Home-Assistant-Integration und stabiler Rückfalls
 
 Die V1.0.0-Runtime basiert funktional auf dem abgenommenen 0.15.30-Stand. Die Releasepromotion selbst führt keine neue Deploymentlogik ein.
 
-### Noch offen vor FINAL
+### FINAL-Status
 
-- vollständige reale V1-Finalabnahme;
-- unveränderlicher Final-Freeze;
-- reale HA-Finalabnahme;
-- öffentliche HACS-/Installationsabnahme;
-- Repository-Topics für HACS;
-- unveränderlicher `v1.0.0`-Tag und Stable-Freeze.
+- reale V1-Abnahme abgeschlossen;
+- HACS/Hassfest/Public Validation grün;
+- öffentlicher Stable-Kanal freigegeben;
+- Freeze-Ref `freeze/v1.0.0-final` gesetzt;
+- V1 als stabiler Produkt- und Rückfallstand dokumentiert;
+- V2-00 abgeschlossen und V2-05 freigegeben.
 
 ---
 
