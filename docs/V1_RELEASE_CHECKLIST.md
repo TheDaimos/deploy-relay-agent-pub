@@ -1,6 +1,6 @@
 # DRA V1.0.0 — Release-Checkliste
 
-Status: **ACTIVE — V1 Finalisierung**
+Status: **FINAL / FROZEN — 2026-10-09**
 
 ## R1 — Runtime-Freeze
 
@@ -11,18 +11,18 @@ Status: **ACTIVE — V1 Finalisierung**
 
 ## R2 — Reale HA-Abnahme
 
-- [ ] Startzustand LOCKED
-- [ ] Projekte erhalten
-- [ ] Seitenleisten-Options-Flow
-- [ ] Quelle/Aktualität
-- [ ] Preview/SHA-256
-- [ ] DEVELOPMENT
-- [ ] Einzelinstallation
-- [ ] Backup/Restore
-- [ ] Sammelupdate
-- [ ] Diagnose-Ladeanzeige
-- [ ] Diagnose-Git-Reconfigure-Regression
-- [ ] Sicherheitsgate
+- [x] Startzustand LOCKED
+- [x] Projekte erhalten
+- [x] Seitenleisten-Options-Flow
+- [x] Quelle/Aktualität
+- [x] Preview/SHA-256
+- [x] DEVELOPMENT
+- [x] Einzelinstallation
+- [x] Backup/Restore — bestehender Pfad freigegeben; echter Restore nicht erneut ausgeführt, da seit vorheriger Realerprobung keine Runtimeänderung
+- [x] Sammelupdate
+- [x] Diagnose-Ladeanzeige
+- [x] Diagnose-Git-Reconfigure-Regression
+- [x] Sicherheitsgate
 
 ## R3 — Produktisierung
 
@@ -55,20 +55,25 @@ docs/
 - [x] ausschließlich RC3-SHA mit Runtime-Provenienznachweis
 - [x] keine DEV-/Diagnoseartefakte im vorgesehenen Releasepaket
 - [x] keine Tokens/Secrets im Public-Paket; privater DEV-Repo-Pfad wird im Runtimecode CI-seitig abgewiesen
-- [ ] HACS-Validierung — nur Repository-Topics noch offen; Hassfest bereits SUCCESS
-- [ ] manuelle Installation prüfen
-- [ ] HACS-Installation prüfen
-- [ ] Updatepfad prüfen
-- [ ] Deinstallation/Entfernung dokumentieren
+- [x] HACS-Validierung + Hassfest SUCCESS
+- [x] manuelle/öffentliche Installationsstruktur geprüft
+- [x] HACS-Installationsweg freigegeben; früher real erprobt, unveränderter Runtimecode
+- [x] Update-/Self-Update-Pfad mehrfach real geprüft
+- [x] Deinstallation/Entfernung dokumentiert und als bestehender unveränderter Pfad freigegeben
 
 ## R5 — FINAL
 
 Erst wenn R1–R4 vollständig abgenommen:
 
-- [ ] V1.0.0 FINAL markieren
-- [ ] unveränderlichen Tag/Freeze setzen
-- [ ] Release Notes finalisieren
-- [ ] Public Main = freigegebener V1-Stand
-- [ ] Projektseite auf FINAL umstellen
-- [ ] V1 als Rückfallpunkt dokumentieren
-- [ ] danach V2-05 starten
+- [x] V1.0.0 FINAL markieren
+- [x] unveränderlichen Freeze-Ref setzen
+- [x] Release Notes finalisieren
+- [x] Public Main = freigegebener V1-Stand
+- [x] Projektseite auf FINAL umstellen
+- [x] V1 als Rückfallpunkt dokumentieren
+- [x] V1-Freigabe für V2-05 erteilt
+
+
+## Finalentscheid 2026-10-09
+
+DRA V1.0.0 wurde als **FINAL / FROZEN** freigegeben. Grundlage ist der unveränderte RC3-Runtimekern `5550b40de7b7eb62439bd88ee175281fc5891d7d`. Bereits früher real erprobte Restore-/Frischinstallationspfade wurden aufgrund fehlender Runtimeänderungen nicht erneut vollständig provoziert und vom Projektverantwortlichen ausdrücklich als nicht releaseblockierend akzeptiert.
