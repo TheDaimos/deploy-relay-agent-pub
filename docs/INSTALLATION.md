@@ -98,6 +98,6 @@ Die V2-Entwicklung muss bestehende V1-Daten übernehmen können:
 
 Eine Neuinstallation nur wegen V2 ist ausdrücklich nicht das Ziel.
 
-## Noch nicht freigegeben
+## FINAL freigegeben
 
 Diese Installationsschritte gelten für DRA V1.0.0 FINAL. Der stabile V1-Stand bleibt als Rückfallpunkt erhalten.
