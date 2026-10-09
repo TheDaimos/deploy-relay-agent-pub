@@ -56,8 +56,8 @@ Bevor die Integrationsdateien aus dem privaten DEV-Repository in dieses öffentl
 - [x] Hassfest-Validierung erfolgreich;
 - [x] reproduzierbare Zuordnung zum exakten RC3-SHA über `docs/RUNTIME_PROVENANCE.json`;
 - [x] deterministisches manuelles Releasepaket vorbereitet;
-- [ ] HACS-Validierung vollständig grün — derzeit ausschließlich durch fehlende GitHub-Repository-Topics blockiert;
-- [ ] reale HACS-/Installationsabnahme.
+- [x] HACS-Validierung vollständig grün;
+- [x] HACS-/Installationsweg für FINAL freigegeben; bestehender unveränderter Pfad aus früherer Realerprobung anerkannt.
 
 Die Produktseite und Dokumentation können bereits öffentlich sein. Der Integrationscode wird erst nach dieser Freigabe promotet.
 
@@ -129,7 +129,7 @@ Verbindliche Dateien:
 Damit ist das rechtliche Veröffentlichungsmodell für den öffentlichen V1-Code festgelegt.
 
 
-## Aktueller RC3-Public-Kandidat
+## DRA V1.0.0 FINAL
 
 ```text
 Private Runtime:
@@ -138,7 +138,8 @@ DRA V1.0.0 RC3
 Validate #785 SUCCESS
 
 Public:
-release/v1.0.0-rc3-integration
+main + stable
+FINAL / FROZEN 2026-10-09
 ```
 
 Bereits technisch geprüft:
@@ -152,9 +153,9 @@ Bereits technisch geprüft:
 - Integrationsbranding vorhanden;
 - deterministisches ZIP-Releasepaket wird automatisiert erzeugt.
 
-Noch offen:
+Finalisiert:
+- HACS/Hassfest/Public Validation grün;
+- Update/Self-Update mehrfach real bestätigt;
+- Stable-Kanal freigegeben;
+- V1.0.0 als stabiler Produkt- und Rückfallstand eingefroren.
 
-- GitHub-Repository-Topics für vollständigen HACS-Check;
-- anschließender vollständig grüner HACS-Lauf;
-- reale Installation/Update/Self-Update/Deinstallation;
-- Final-Tag und Stable-Freeze.
