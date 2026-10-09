@@ -12,7 +12,7 @@ Verbindliche technische Herkunft:
 - RC3-Runtimecommit: `5550b40de7b7eb62439bd88ee175281fc5891d7d`
 - private CI: Validate #785 SUCCESS
 - öffentliche Runtime-Provenienz: `docs/RUNTIME_PROVENANCE.json`
-- öffentlicher FINAL-Dokumentationsstand: `fcdca0aa74964877929174c40f595ebf8634f0f8`
+- öffentlicher FINAL-Stand: `main` / `stable` / `freeze/v1.0.0-final`
 - Stable-Ref: `stable`
 - Freeze-Ref: `freeze/v1.0.0-final`
 
