@@ -1,7 +1,7 @@
 # Deploy Relay Agent V1 — Installation
 
-> Status: **V1.0.0 RC3 · Finalkandidat**  
-> Öffentliche Integrationsverteilung: **technisch vorbereitet · noch nicht FINAL freigegeben**  
+> Status: **V1.0.0 FINAL · FROZEN**  
+> Öffentliche Integrationsverteilung: **FINAL freigegeben**  
 > DRA V2 ist eine spätere Architekturentwicklung und nicht Bestandteil der V1-Installation.
 
 ## Zielbild
@@ -23,9 +23,9 @@ privates DEV-Repository
 
 Der öffentliche Stand enthält ausschließlich freigegebene Release-Inhalte. Diagnoseexports, interne Recovery-Daten und Entwicklungsartefakte bleiben im privaten DEV-Bereich.
 
-## Geplanter bevorzugter Installationsweg — HACS
+## Bevorzugter Installationsweg — HACS
 
-Nach Abschluss der V1-Finalabnahme wird DRA über HACS als benutzerdefiniertes Repository freigegeben. Die HACS-Struktur und Metadaten sind im RC3-Public-Kandidaten bereits vorhanden.
+DRA V1.0.0 FINAL wird über HACS als benutzerdefiniertes Repository bereitgestellt. HACS-Struktur, Metadaten und Validierung sind Bestandteil des freigegebenen Public-Standes.
 
 **Repository für HACS — Copy & Paste:**
 
@@ -44,7 +44,7 @@ https://github.com/TheDaimos/deploy-relay-agent-pub
 9. DRA konfigurieren.
 10. DRA startet grundsätzlich im Zustand **GESPERRT / LOCKED**.
 
-Der exakte öffentliche Repository-Link und der stabile Releasekanal werden mit V1 FINAL freigeschaltet.
+Der öffentliche Repository-Link und der stabile Releasekanal sind mit V1.0.0 FINAL freigegeben.
 
 ## Manueller Installationsweg
 
@@ -100,4 +100,4 @@ Eine Neuinstallation nur wegen V2 ist ausdrücklich nicht das Ziel.
 
 ## Noch nicht freigegeben
 
-Solange V1.0.0 noch RC3 / Finalkandidat ist, dienen die öffentlichen Installationsschritte der Abnahme und Vorbereitung. Die Freigabe für normale Nutzung erfolgt erst nach bestandener V1-Final- und Distributionsabnahme.
+Diese Installationsschritte gelten für DRA V1.0.0 FINAL. Der stabile V1-Stand bleibt als Rückfallpunkt erhalten.
