@@ -1,8 +1,8 @@
 # Deploy Relay Agent — Releases
 
-## DRA V1.0.0 RC3 — Finalkandidat
+## DRA V1.0.0 FINAL
 
-V1 ist der geplante stabile Abschluss der bisherigen DRA-Architektur. Der aktuelle Finalkandidat ist RC3 auf dem privaten Commit `5550b40de7b7eb62439bd88ee175281fc5891d7d` mit Validate #785 SUCCESS.
+V1.0.0 ist der freigegebene stabile Abschluss der bisherigen DRA-Architektur. Der FINAL-Stand basiert unverändert auf dem RC3-Runtimekern `5550b40de7b7eb62439bd88ee175281fc5891d7d` mit Validate #785 SUCCESS. Der öffentliche Runtimeinhalt bleibt bytegenau über `docs/RUNTIME_PROVENANCE.json` diesem Stand zugeordnet.
 
 ### Highlights
 
@@ -38,9 +38,13 @@ DRA V1:
 - trennt Lesetoken und Diagnose-Schreibtoken;
 - mutiert erst nach expliziter Freigabe.
 
-### Final-Gate
+### Finalstatus
 
-V1 wird erst als FINAL veröffentlicht, wenn der reale Home-Assistant-Abnahmelauf **und** die öffentliche HACS-/Installationsabnahme vollständig bestanden sind.
+**FINAL / FROZEN — 2026-10-09**
+
+Die V1-Finalisierung wurde nach wiederholter realer Nutzung und Abnahme des unveränderten RC3-Codes freigegeben. Die bewusst nicht erneut ausgeführten Restore-/Frischinstallationsschritte wurden als bereits zuvor erprobte, seitdem unveränderte Pfade akzeptiert. Es wurden dafür keine zusätzlichen V1-Runtimeänderungen vorgenommen.
+
+V1.0.0 ist damit der stabile Produkt- und Rückfallstand für die V2-Entwicklung.
 
 ---
 
