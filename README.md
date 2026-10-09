@@ -12,9 +12,9 @@
 **Exakter Commit · Vorschau · Sicherung · Verifikation · Rollback · Diagnose**
 
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Custom%20Integration-41BDF5?logo=home-assistant&logoColor=white)
-![Version](https://img.shields.io/badge/DRA-V1.0.0%20RC3-16c7ee)
-![Status](https://img.shields.io/badge/V1-Finalkandidat-2ea96b)
-![HACS](https://img.shields.io/badge/HACS-Ver%C3%B6ffentlichung%20in%20Vorbereitung-d6a648)
+![Version](https://img.shields.io/badge/DRA-V1.0.0%20FINAL-16c7ee)
+![Status](https://img.shields.io/badge/V1-FINAL-2ea96b)
+![HACS](https://img.shields.io/badge/HACS-bereit-2ea96b)
 ![V2](https://img.shields.io/badge/DRA%20V2-Roadmap%20festgelegt-d6a648)
 ![License](https://img.shields.io/badge/Code-GPL--3.0--only-lightgrey)
 
@@ -27,8 +27,8 @@
 </div>
 
 > [!IMPORTANT]
-> **DRA V1.0.0 befindet sich in der abschließenden Release-Candidate-Phase.**  
-> Der aktuelle Finalkandidat ist **DRA V1.0.0 RC3** (`5550b40d…`, Validate #785 SUCCESS). Die öffentliche Integrationsstruktur, HACS-Metadaten, Hassfest-Prüfung, Runtime-Provenienz und das reproduzierbare manuelle Releasepaket sind vorbereitet. Die Freigabe als **V1 FINAL** erfolgt erst nach vollständiger Realabnahme und erfolgreicher öffentlicher Installationsabnahme.
+> **DRA V1.0.0 ist FINAL / FROZEN.**  
+> Der freigegebene V1-Runtimekern basiert unverändert auf **RC3** (`5550b40d…`, Validate #785 SUCCESS). Die öffentliche Integrationsstruktur, HACS-/Hassfest-Prüfung, Runtime-Provenienz und das reproduzierbare Releasepaket sind freigegeben. V1 dient ab jetzt als stabiler Produkt- und Rückfallstand für die weitere V2-Entwicklung.
 
 <p align="center">
   <img
@@ -122,9 +122,7 @@ DRA V1 bündelt die heute bewährten Funktionen zu einem stabilen ersten Release
 
 ## Bevorzugter Weg — HACS
 
-Der öffentliche HACS-Weg ist für **DRA V1 FINAL** vorgesehen.
-
-Nach Freigabe:
+Der öffentliche HACS-Weg ist für **DRA V1.0.0 FINAL** freigegeben.
 
 **Repository für HACS — Copy & Paste:**
 
@@ -138,9 +136,6 @@ https://github.com/TheDaimos/deploy-relay-agent-pub
 4. Home Assistant vollständig neu starten;
 5. unter **Einstellungen → Geräte & Dienste → Integration hinzufügen** nach **Deploy Relay Agent** suchen;
 6. DRA konfigurieren.
-
-> [!WARNING]
-> Solange V1.0.0 noch als **RC3 / Finalkandidat** gekennzeichnet ist, ist der öffentliche HACS-Weg noch nicht als finaler Installationsweg freigegeben.
 
 Vollständige Anleitung: **[docs/INSTALLATION.md](docs/INSTALLATION.md)**
 
